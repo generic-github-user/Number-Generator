@@ -1,0 +1,178 @@
+<html>
+<head><title>Complex Number Generator</title></head>
+<body>
+<script type="text/javascript">
+
+alert("Welcome to Complex Number Generator version 2.0. Click OK to continue.");
+
+function CountUpNumbers(){
+
+var NumberToCountUpTo = prompt("What number do you want to count up to?");
+var Repeat = 1;
+
+while(Repeat < NumberToCountUpTo){
+
+document.write(Repeat + "<br/>");
+Repeat = Repeat + 1;
+
+}
+
+document.write(NumberToCountUpTo + "<br/>");
+document.write("Counting Up Complete. Refresh the page (Ctrl/Cmd + r) to try again!")
+
+}
+
+function CountDownNumbers(){
+
+var NumberToCountDownFrom = prompt("What number do you want me to count down from?");
+
+while(NumberToCountDownFrom > 0){
+
+document.write(NumberToCountDownFrom + "<br/>");
+NumberToCountDownFrom = NumberToCountDownFrom - 1;
+
+}
+
+document.write("Counting Down Complete. Refresh the page (Ctrl/Cmd + r) to try again!")
+
+}
+
+function GenerateSquareNumbers(){
+
+var SquareNumberAmount = prompt("How many square numbers do you wish to generate?");
+var CurrentSquareNumberSeed = 2;
+
+document.write("1" + "<br/>");
+
+while(SquareNumberAmount > 0){
+
+document.write((CurrentSquareNumberSeed * CurrentSquareNumberSeed) + "<br/>");
+CurrentSquareNumberSeed = CurrentSquareNumberSeed + 1;
+SquareNumberAmount = SquareNumberAmount - 1;
+
+}
+
+document.write("Square Number Generation Complete. Refresh the page (Ctrl/Cmd + r) to try again!");
+
+}
+
+function GenerateTriangularNumbers(){
+
+var TriangularNumberAmount = prompt("How many triangular numbers do you wish to generate?");
+var CurrentTriangularNumber = 1;
+var CurrentTriangularNumberLayer = 2;
+
+while(TriangularNumberAmount > 0){
+
+document.write(CurrentTriangularNumber + "<br/>");
+CurrentTriangularNumber = CurrentTriangularNumber + CurrentTriangularNumberLayer;
+CurrentTriangularNumberLayer = CurrentTriangularNumberLayer + 1;
+TriangularNumberAmount = TriangularNumberAmount - 1
+
+}
+
+document.write("Triangular Number Generation Complete. Refresh the page (Ctrl/Cmd + r) to try again!");
+
+}
+
+function GenerateRandomNumbers(){
+
+var RandomNumberAmount = prompt("How many random numbers would you like to generate?");
+var RandomNumberSize = prompt("What is the maximum size of the random numbers you would like to generate?")
+
+while(RandomNumberAmount > 0){
+
+document.write(Math.ceil(Math.random()*RandomNumberSize) + "<br/>");
+RandomNumberAmount = RandomNumberAmount - 1;
+
+}
+
+document.write("Random Number Generation Complete. Refresh the page (Ctrl/Cmd + r) to try again!");
+
+}
+
+function GenerateFibbonacciNumbers(){
+
+var FibbonacciGenerationLimit = prompt("How many fibbonacci numbers do you want to generate?");
+var Num1 = 0;
+var Num2 = 1;
+var CurrentFibbonacciNumber = 2;
+
+document.write(0 + "<br/>");
+document.write(1 + "<br/>");
+
+while(FibbonacciGenerationLimit > 0){
+
+CurrentFibbonacciNumber = Num1 + Num2;
+document.write(CurrentFibbonacciNumber + "<br/>");
+Num1 = Num2;
+Num2 = CurrentFibbonacciNumber;
+FibbonacciGenerationLimit = FibbonacciGenerationLimit - 1;
+
+}
+
+document.write("Fibbonacci Number Generation Complete. Refresh the page (Ctrl/Cmd + r) to try again!")
+
+}
+
+function GeneratePrimeNumbers(){
+
+alert("Script for generating prime numbers is not finished yet.");
+
+}
+
+function ConvertFarenheitToCelcius(){
+
+var FarenheitTemperature = prompt("What, in degrees, is the Farenheit temperature you would like to convert into Celcius?");
+
+alert(FarenheitTemperature + " degrees Farenheit is equivalent to " + (FarenheitTemperature - 32) / 1.8 + " degrees Celcius.");
+
+}
+
+function ConvertCelciusToFarenheit(){
+
+var CelciusTemperature = prompt("What, in degrees, is the Celcius temperature you would like to convert into Farenheit?");
+
+alert(CelciusTemperature + " degrees Celcius is equivalent to " + ((CelciusTemperature * 1.8) + 32) + " degrees Farenheit.");
+
+}
+
+function About(){
+alert("I began working on this tool on Thursday, August 13, 2015, in the programming language JavaScript. My original goal was to write a program to generate fibbonacci numbers, but minutes after that idea came into play, I decided to add other functions.");
+}
+
+function UsagePolicy(){
+alert("The following describes what you can and cannot do with this tool: I'm not going to lay out anything real complicated or hard to understand, but I just want to make it clear that you are allowed to use this tool in any way you want (though I'm not in any way responsible in any way if you happen to use it to destroy the universe or anything), but I would definitely appreciate credit for creating it. That is to say, you can take numbers you get off of this site and post them on your own site, but you should try to (somewhere) put a notation that you got these numbers off of my website. Thank you and have fun!  :-)");
+}
+
+</script>
+
+<center>
+
+<button onClick="About()"><h3 style="color:silver">Click here to see an about page!</h3></button>
+<button onClick="UsagePolicy()"><h3 style="color:silver">Click here to see legal stuff/Usage Policy!</h3></button>
+<hr>
+<button onClick="CountUpNumbers()"><h2 style="color:red">Click here to begin Counting Up!</h2></button>
+<br>
+<br>
+<button onClick="CountDownNumbers()"><h2 style="color:red">Click here to begin Counting Down!</h2></button>
+<br>
+<br>
+<button onClick="GenerateSquareNumbers()"><h2 style="color:orange">Click here to begin Generating Square Numbers!</h2></button>
+<br>
+<button onClick="GenerateTriangularNumbers()"><h2 style="color:orange">Click here to begin Generating Triangular Numbers!</h2></button>
+<br>
+<button onClick="GenerateRandomNumbers()"><h2 style="color:yellow">Click here to begin Generating Random Numbers!</h2></button>
+<br>
+<button onClick="GenerateFibbonacciNumbers()"><h2 style="color:green">Click here to begin Generating Fibbonacci Numbers!</h2></button>
+<br>
+<button onClick="GeneratePrimeNumbers()"><h2 style="color:green">Click here to begin Generating Prime Numbers!</h2></button>
+<br>
+<button onClick="ConvertFarenheitToCelcius()"><h2 style="color:blue">Click here to begin Converting Farenheit temperatures to Celcius temperatures!</h2></button>
+<br>
+<button onClick="ConvertCelciusToFarenheit()"><h2 style="color:blue">Click here to begin Converting Celcius temperatures to Farenheit temperatures!</h2></button>
+
+</center>
+
+</body>
+</html>
